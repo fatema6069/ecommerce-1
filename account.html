@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title> all products details</title>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+         <link rel="stylesheet" href="assests/css/style.css">
+        
+    </head>
+    <body>
+       <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="eccommerce.html"> <img src="assests/img/Fatema-designstyle-boots-m.png" width="125"px></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                   <li><a href="eccommerce.html">Home</a></li>
+                   <li> <a href="products.html">Products</a></li>
+                   <li> <a href=""> About</a></li>
+                   <li> <a href=""> Contact</a></li>
+                   <li> <a href="account.html"> Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="assests/img/lock.png" width="30px" height="30px"></a>
+            <img src="menu-icon-png-images-free-transparent-image-download-pngix-menu-icon-png-320_320.png" class=" menu-icon" onclick="menutoggole()">
+        </div>
+        </div>
+        <div class="account-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="assests/img/car.png" width="100%">
+                    </div>
+                    <div class="col-2">
+                        <div class="form-container">
+                           <div class="form-btn">
+                               <span onclick="login()">Login</span>
+                               <span onclick="register()"> Register</span>
+                               <hr id="Indicator">
+                           </div>
+                           <form id="LoginForm">
+                     <input type="text" placeholder="username">
+                     <input type="password" placeholder="password">
+     <button type ="submit" class="btn"> log in</button>
+                          <a href=""> Forget password</a>
+                           </form>
+                            <form id="RegForm">
+                     <input type="text" placeholder="username">
+                     <input type="email" placeholder="Email">
+                     <input type="password" placeholder="password">
+                                <button type ="submit" class="btn"> Regesterd</button>
+                           </form>
+                           
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3> Download our app</h3>
+                        <p> download appfor android and ios mobile phone</p>
+                        <div class="app-logo">
+                            <img src="assests/img/Philips-Logo.png">
+                            <img src="assests/img/paypal-5-226456.png">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="assests/img/Fatema-designstyle-boots-m.png" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe dolorum officia ad?.</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3> usefull links</h3>
+                        <ul>
+                        <li> coupons</li>
+                        <li> blog post</li>
+                        <li> return policy</li>
+                        <li> join affilate</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3> follow us</h3>
+                        
+                        <ul>
+                            <li>facebook</li>
+                            <li> twitter</li>
+                            <li> instagram</li>
+                            <li> linkdin</li>
+                        </ul>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <script>
+            var MenuItems = document.getElementById("MenuItems");
+            
+            MenuItems.style.maxHeight = "0px"
+            
+            function menutoggole(){
+                if(MenuItems.style.maxHeight == "0px")
+                    
+                   { MenuItems.style.maxHeight = "200px";
+                    
+                   }
+                    else
+                       { MenuItems.style.maxHeight = "0px";  
+                        
+                        
+                       }
+                }
+            
+        </script>
+        <script>
+            var LoginForm = document.getElementById("LoginForm");
+            var RegForm = document.getElementById("RegForm");
+            var Indicator = document.getElementById(RegForm);
+            
+            function register(){
+                RegForm.style.transform = "translateX(0)";
+                 LoginForm.style.transform = "translateX(0)";
+             Indicator.style.transform = "translateX(100px)";
+                
+                
+            }
+            
+            function login(){
+                
+                RegForm.style.transform = "translateX(300px)";
+                 LoginForm.style.transform = "translateX(300px)";
+             Indicator.style.transform = "translateX(0px)";
+                
+            }
+        
+        
+        </script>
+        
+    </body>
+</html>
